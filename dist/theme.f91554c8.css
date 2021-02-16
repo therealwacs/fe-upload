@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    background-color: #666;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.container {
+    padding-top: 5rem;
+    width: 800px;
+    margin: 0 auto;
+}
+.card {
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, .2);
+}
+.btn {
+    color: #42b983;
+    position: relative;
+    border-radius: 99px;
+    border: 1px solid #42b983;
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    font-weight: 700;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: all .3s ease;
+}
+.btn:active {
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .3);
+}
+.btn.primary {
+    background-color: #42b983;
+    color: #fff;
+}
+
+.preview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: .5rem;
+}
+.preview-image {
+    position: relative;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    background-color: #000;
+    overflow: hidden;
+}
+.preview-image.removing {
+    transform: scale(0);
+    transition: transform .3s ease;
+}
+
+.preview-image img {
+    width: 180px;
+    height: auto;
+}
+.preview-remove {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 10px;
+    right: 10px;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    transition: background-color .35s ease, opacity .35s ease;
+}
+.preview-remove:hover {
+    background-color: #fff;
+    transition: background-color .35s ease;
+}
+.preview-image:hover .preview-remove {
+    opacity: 1;
+    transition: opacity .35s ease;
+}
+.preview-image:hover .preview-info {
+    transform: translateY(0);
+    transition: transform .35s ease;
+}
+
+.preview-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-size: .8rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(255, 255, 255, .8);
+    transform: translateY(100%);
+    transition: transform .35s ease;
+}
+.file-name {
+    padding: 5px;
+}
+.file-size {
+    padding: 5px;
+}
+
+.preview-info-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #42b983;
+    transition-property: width;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+/*# sourceMappingURL=/theme.f91554c8.css.map */
